@@ -14,7 +14,7 @@
 import VueMarque from '@/components/VueMarque.vue';
 
 const data = {
-  copy: false,
+  copy: true,
   innerGap: 50,
   outerGap: 150,
   speed: 3000,
