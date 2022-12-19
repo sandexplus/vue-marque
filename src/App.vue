@@ -1,27 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="test">
+    <vue-marque v-bind="data">
+        <p>123123</p>
+        <p>321321</p>
+        <img src="@/assets/logo.png" alt="">
+        <p>dfgjdhngsdfgnskfgnksfdn</p>
+        <img src="@/assets/logo.png" alt="">
+    </vue-marque>
+  </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+<script lang="ts" setup>
+import VueMarque from '@/components/VueMarque.vue';
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    HelloWorld,
-  },
-});
+const data = {
+  copy: false,
+  innerGap: 50,
+  outerGap: 150,
+  speed: 3000,
+  dir: 'rtl',
+};
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss" scoped>
+.test {
+  width: 100%;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+p {
+  background: #00000050;
+}
+.flex  {
+  display: flex;
+  gap: 10px;
 }
 </style>
